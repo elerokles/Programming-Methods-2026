@@ -11,7 +11,7 @@
 - [x] **ch2**: Types, Operators & Expressions (Data types, bitwise operators, type conversion)
 - [x] **ch3**: Control Flow (if-else, switch, loops, break & continue)
 - [x] **ch4**: Functions & Program Structure (External variables, scope rules, header files)
-- [ ] **ch5**: Pointers & Arrays (Pointer arithmetic, swap, line sort, CLI arguments)
+- [x] **ch5**: Pointers & Arrays (Pointer arithmetic, swap, line sort, CLI arguments)
 
 File names start with a number (order in the chapter) and, for textbook
 exercises, the exercise number (e.g. `ex1-13` = Exercise 1-13).
@@ -65,6 +65,26 @@ exercises, the exercise number (e.g. `ex1-13` = Exercise 1-13).
 | `05_ex4-5_calculator_math_functions/` | 4.4–4.5, Ex 4-5 | Calculator split into `main.c`, `stack.c`, `getop.c`, `getch.c`, `calc.h`; adds `sin`, `cos`, `exp`, `pow` |
 | `06_preprocessor_macros.c` | 4.11 | `#define` macros, `#ifdef DEBUG`, `#if/#elif/#else` |
 
+### ch5 – Pointers & Arrays
+| File | Section / Exercise | What it does |
+|------|--------------------|--------------|
+| `01_pointer_basics.c` | 5.1 | `&` and `*`, and the trace exercise from the slides |
+| `02_swap_call_by_reference.c` | 5.2 | Wrong swap (call by value) vs. `swap(&a, &b)` |
+| `03_getint.c` | 5.2 | `getint(&n)`: reads integers from input through a pointer |
+| `04_pointers_and_arrays.c` | 5.3 | `a[i]` vs. `*(pa+i)`, pointer version of strlen |
+| `05_string_copy_compare.c` | 5.4 | Array vs. pointer strings, pointer `strcpy` and `strcmp` |
+| `06_ex5-3_strcat.c` | 5.4, Ex 5-3 | Pointer version of `strcat(s, t)` |
+| `07_ex5-4_strend.c` | 5.4, Ex 5-4 | `strend(s, t)`: 1 if t is at the end of s |
+| `08_ex5-5_strncpy_strncat_strncmp.c` | 5.4, Ex 5-5 | Own versions of `strncpy`, `strncat`, `strncmp` |
+| `09_ex5-6_pointer_versions.c` | 5.4, Ex 5-6 | getline, atoi, itoa, reverse, strindex rewritten with pointers |
+| `10_sort_lines_alloc.c` | 5.6 | Sorts input lines with a pointer array, quicksort and `alloc` |
+| `11_ex5-7_sort_lines_linestor.c` | 5.6, Ex 5-7 | Same, storing lines in `linestor[]` supplied by main |
+| `12_malloc_calloc.c` | Dynamic memory | `malloc`, `calloc`, `free` |
+| `13_ex5-8_day_of_year_error_check.c` | 5.7, Ex 5-8 | `day_of_year` / `month_day` with a 2D array and error checking |
+| `14_month_name_pointer_array.c` | 5.8–5.9 | `month_name(n)`, pointer array vs. 2D array |
+| `15_echo_command_line_args.c` | 5.10 | `echo`: prints `argv` |
+| `16_find_pattern_args.c` | 5.10 | `find -x -n pattern` using `argc`/`argv` and `strstr` |
+
 ---
 
 ## 🛠 How to Compile & Run
@@ -77,5 +97,10 @@ Multi-file program (ch4 Ex 4-5):
 ```cmd
 cl /Fe:calc.exe ch4\05_ex4-5_calculator_math_functions\*.c
 calc.exe
+```
+Programs with command-line arguments (ch5):
+```cmd
+cl ch5\16_find_pattern_args.c
+16_find_pattern_args.exe -n ould < input.txt
 ```
 Programs that read input stop at end-of-file: press **Ctrl+Z** then **Enter** on Windows.
