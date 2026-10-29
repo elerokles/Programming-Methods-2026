@@ -1,7 +1,7 @@
 # C Programming Language Exercises & Solutions
-- **Student ID**: 2026XXXXX  <!-- TODO: fill in -->
-- **Name**: YOUR NAME  <!-- TODO: fill in -->
-- **Department**: Dept. of Game / International College, Dongseo University
+- **Student ID**: 20268490
+- **Name**: ROKAS PRANINSKAS
+- **Department**: Dept. of Game Dev. / International College, Dongseo University
 - **Environment**: Windows 11, Visual Studio 2022 / MSVC Compiler
 
 ---
