@@ -1,0 +1,24 @@
+# Visual Studio cache / settings
+.vs/
+*.user
+*.suo
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.slnx
+
+# Build outputs
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+*.idb
+*.lib
+*.exp
+*.log
+*.tlog
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
